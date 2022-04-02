@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS datesdb CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE datesdb;
+
+-- Tables
+CREATE TABLE IF NOT EXISTS dates (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    date DATETIME NOT NULL,
+    CONSTRAINT dates PRIMARY KEY (id)
+);
+
+-- Data
+INSERT INTO dates (date) VALUES
+    ('2022-01-01 00:00:00'),
+    ('2022-03-27 01:30:00'),
+    ('2022-03-27 02:30:00'),
+    ('2022-03-27 03:30:00');
